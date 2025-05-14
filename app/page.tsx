@@ -866,44 +866,45 @@ export default function Home() {
             </div>
 
             {/* Substituir formulário por botão de WhatsApp */}
-            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-              <h3 className="text-2xl font-bold mb-4 text-blue-950">Solicitar Orçamento</h3>
-              <p className="text-gray-600 mb-6">
-                Clique no botão abaixo para falar diretamente com nossa equipe pelo WhatsApp e receber um orçamento
-                personalizado para sua viagem.
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="w-full py-6 text-lg bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2"
-              >
-                <Link
-                  href={whatsappLink(
-                    "Olá! Gostaria de solicitar um orçamento personalizado para minha viagem a Foz do Iguaçu.",
-                  )}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-6 h-6 mr-2"
-                  >
-                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
-                    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
-                    <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
-                    <path d="M9 14a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5Z"></path>
-                  </svg>
-                  Solicitar Orçamento via WhatsApp
-                </Link>
-              </Button>
-              <p className="text-sm text-gray-500 mt-4">Resposta rápida e atendimento personalizado!</p>
-            </div>
+<div className="bg-white px-4 py-8 sm:p-8 rounded-lg shadow-lg text-center w-full max-w-md mx-auto">
+  <h3 className="text-2xl font-bold mb-4 text-blue-950">Solicitar Orçamento</h3>
+  <p className="text-gray-600 mb-6">
+    Clique no botão abaixo para falar diretamente com nossa equipe pelo WhatsApp e receber um orçamento
+    personalizado para sua viagem.
+  </p>
+  <Button
+    asChild
+    size="lg"
+    className="w-full py-5 sm:py-6 text-base sm:text-lg bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2"
+  >
+    <Link
+      href={whatsappLink(
+        "Olá! Gostaria de solicitar um orçamento personalizado para minha viagem a Foz do Iguaçu.",
+      )}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="white"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6 mr-2"
+      >
+        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
+        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
+        <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
+        <path d="M9 14a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5Z"></path>
+      </svg>
+      Solicitar Orçamento via WhatsApp
+    </Link>
+  </Button>
+  <p className="text-sm text-gray-500 mt-4">Resposta rápida e atendimento personalizado!</p>
+</div>
+
           </div>
         </div>
       </section>

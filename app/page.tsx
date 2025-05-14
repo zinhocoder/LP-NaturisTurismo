@@ -36,7 +36,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-blue-950">
         <div className="absolute inset-0 z-0 opacity-70">
-          <Image src="/hero-image.jpg" alt="Cataratas do Iguaçu" fill className="object-cover object-center" priority />
+          <Image src="/cataratas.gif" alt="Cataratas do Iguaçu" fill className="object-cover object-center" priority />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-blue-950/70 to-blue-950/40 z-10"></div>
 

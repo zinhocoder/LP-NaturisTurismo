@@ -810,7 +810,7 @@ export default function Home() {
             {/* Dream Ice Bar */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
               <div className="relative h-72">
-                <Image src="/passeios/dreamice.jpg" alt="Dream Ice Bar" fill className="object-cover" />
+                <Image src="/passeios/dreamIce.jpg" alt="Dream Ice Bar" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>

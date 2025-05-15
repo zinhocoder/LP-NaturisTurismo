@@ -52,7 +52,7 @@ export default function Home() {
                 <span className="font-medium">WHATSAPP: (45) 9912-81353</span>
               </div>
               <div className="flex gap-4">
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="https://www.facebook.com/share/15ivCMzfvV/" className="text-white hover:text-green-400 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -68,7 +68,7 @@ export default function Home() {
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                   </svg>
                 </Link>
-                <Link href="#" className="text-white hover:text-green-400 transition-colors">
+                <Link href="https://www.instagram.com/naturisturismo?igsh=aG5nZWgyZXh6dDYz" className="text-white hover:text-green-400 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -138,202 +138,213 @@ export default function Home() {
                   variant="outline"
                   className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
                 >
-                  <Link href="#atrativos">
-                    Conhecer Passeios
-                    <ChevronRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                   <a href="#atrativos">
+    Conhecer Passeios
+    <ChevronRight className="ml-2 h-5 w-5" />
+  </a>
+</Button>
               </div>
             </div>
+{/* Destaque de Receptivo */}
+<div className="mt-8 md:mt-0 bg-gradient-to-br from-green-500/20 to-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-white shadow-lg transition-all duration-300 hover:scale-105 self-center max-w-md mx-auto">
+  <h3 className="text-2xl font-extrabold mb-6 text-green-400 text-center tracking-wide">
+    RECEPTIVO EM:
+  </h3>
+  <ul className="space-y-4">
+    <li className="flex items-center">
+      <ChevronRight className="h-6 w-6 text-green-400 mr-3" />
+      <span className="text-lg font-semibold tracking-wide">FOZ DO IGUAÇU</span>
+    </li>
+    <li className="flex items-center">
+      <ChevronRight className="h-6 w-6 text-green-400 mr-3" />
+      <span className="text-lg font-semibold tracking-wide">CIUDAD DEL ESTE</span>
+    </li>
+    <li className="flex items-center">
+      <ChevronRight className="h-6 w-6 text-green-400 mr-3" />
+      <span className="text-lg font-semibold tracking-wide">PUERTO IGUAZÚ</span>
+    </li>
+  </ul>
+</div>
 
-            {/* Destaque de Receptivo */}
-            <div className="mt-8 md:mt-0 bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 text-white self-center">
-              <h3 className="text-xl font-bold mb-4 text-green-400">RECEPTIVO EM:</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <ChevronRight className="h-5 w-5 text-green-400 mr-2" />
-                  <span className="text-lg font-semibold">FOZ DO IGUAÇU</span>
-                </li>
-                <li className="flex items-center">
-                  <ChevronRight className="h-5 w-5 text-green-400 mr-2" />
-                  <span className="text-lg font-semibold">CIUDAD DEL ESTE</span>
-                </li>
-                <li className="flex items-center">
-                  <ChevronRight className="h-5 w-5 text-green-400 mr-2" />
-                  <span className="text-lg font-semibold">PUERTO IGUAZÚ</span>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
+{/* Atrativos Title */}
+<section className="bg-blue-950 py-6">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-white text-center">Atrativos</h2>
+  </div>
+</section>
 
-      {/* Atrativos Title */}
-      <section className="bg-blue-950 py-6">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center">Atrativos</h2>
+{/* Atrativos Description - Versão Aprimorada */}
+<section className="bg-white py-12">
+  <div className="container mx-auto px-4">
+    <div className="max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
+          <div className="bg-blue-950 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-8 h-8"
+            >
+              <path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-blue-950 mb-2">3 Países</h3>
+          <p className="text-gray-700">
+            Explore Brasil, Argentina e Paraguai em uma única viagem com nosso transporte exclusivo.
+          </p>
         </div>
-      </section>
 
-      {/* Atrativos Description - Versão Aprimorada */}
-      <section className="bg-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
-                <div className="bg-blue-950 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-8 h-8"
-                  >
-                    <path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-2">3 Países</h3>
-                <p className="text-gray-700">
-                  Explore Brasil, Argentina e Paraguai em uma única viagem com nosso transporte exclusivo.
-                </p>
-              </div>
+        <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
+          <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-8 h-8"
+            >
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-blue-950 mb-2">Atendimento VIP</h3>
+          <p className="text-gray-700">
+            Suporte personalizado 24h via WhatsApp para garantir a melhor experiência durante sua estadia.
+          </p>
+        </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
-                <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-8 h-8"
-                  >
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-2">Atendimento VIP</h3>
-                <p className="text-gray-700">
-                  Suporte personalizado 24h via WhatsApp para garantir a melhor experiência durante sua estadia.
-                </p>
-              </div>
+        <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
+          <div className="bg-blue-950 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-8 h-8"
+            >
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-blue-950 mb-2">+20 Atrativos</h3>
+          <p className="text-gray-700">
+            Mais de 20 opções de passeios cuidadosamente selecionados para todos os gostos e idades.
+          </p>
+        </div>
+      </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
-                <div className="bg-blue-950 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-8 h-8"
-                  >
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-blue-950 mb-2">+20 Atrativos</h3>
-                <p className="text-gray-700">
-                  Mais de 20 opções de passeios cuidadosamente selecionados para todos os gostos e idades.
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center bg-gradient-to-r from-blue-950 to-blue-900 p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Planeje as férias dos seus sonhos!</h3>
-              <p className="text-lg text-white/90 mb-6">
-                Na Naturis Turismo, pensamos em cada detalhe para proporcionar uma experiência inesquecível. Nossos
-                roteiros são planejados para maximizar seu tempo e garantir que você conheça o melhor da Tríplice
-                Fronteira com conforto, segurança e exclusividade.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5 text-green-400 mr-2"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="text-white">Transporte Privativo</span>
-                </div>
-                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5 text-green-400 mr-2"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="text-white">Guias Especializados</span>
-                </div>
-                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5 text-green-400 mr-2"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="text-white">Roteiros Personalizados</span>
-                </div>
-                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5 text-green-400 mr-2"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="text-white">Experiências Exclusivas</span>
-                </div>
-              </div>
-            </div>
+      <div className="text-center bg-gradient-to-r from-blue-950 to-blue-900 p-8 rounded-lg shadow-lg">
+        <h3 className="text-2xl font-bold text-white mb-4">Planeje as férias dos seus sonhos!</h3>
+        <p className="text-lg text-white/90 mb-6">
+          Na Naturis Turismo, pensamos em cada detalhe para proporcionar uma experiência inesquecível. Nossos
+          roteiros são planejados para maximizar seu tempo e garantir que você conheça o melhor da Tríplice
+          Fronteira com conforto, segurança e exclusividade.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5 text-green-400 mr-2"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span className="text-white">Transporte Privativo</span>
+          </div>
+          <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5 text-green-400 mr-2"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span className="text-white">Guias Especializados</span>
+          </div>
+          <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5 text-green-400 mr-2"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span className="text-white">Roteiros Personalizados</span>
+          </div>
+          <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-5 h-5 text-green-400 mr-2"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span className="text-white">Experiências Exclusivas</span>
           </div>
         </div>
-      </section>
+
+        {/* Imagem abaixo */}
+        <div className="mt-6">
+          <img
+            src="/executivos.png"
+            alt="Imagem ilustrativa"
+            className="rounded-lg mx-auto w-full max-w-2xl shadow-md"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Principais Atrativos - Primeira Linha */}
-      <section className="bg-blue-50 py-12">
+      <section id="atrativos" className="bg-blue-50 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Cataratas BR */}
@@ -765,7 +776,7 @@ export default function Home() {
             {/* Templo Budista */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
               <div className="relative h-72">
-                <Image src="/passeios/TemploBudista.png" alt="Templo Budista" fill className="object-cover" />
+                <Image src="/passeios/templobudista.jpg" alt="Templo Budista" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>

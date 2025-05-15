@@ -44,7 +44,7 @@ export default function Home() {
           {/* Logo e contatos no topo da hero */}
           <div className="flex justify-between items-center mb-16">
             <div className="flex items-center">
-              <Image src="/naturis-logo.png" alt="Naturis Turismo" width={180} height={80} className="h-auto" />
+              <Image src="/naturislogo.png" alt="Naturis Turismo" width={180} height={80} className="h-auto" />
             </div>
             <div className="flex items-center gap-6">
               <div className="hidden md:flex items-center gap-2 text-white">
@@ -108,40 +108,61 @@ export default function Home() {
           </div>
 
           {/* Conteúdo principal da hero */}
-          <div className="max-w-2xl space-y-6 text-white py-20 md:py-28">
-            <div className="inline-block animate-bounce bg-green-600 text-white py-1 px-3 rounded-full text-sm font-medium mb-2">
-              O melhor da Tríplice Fronteira!
-            </div>
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl uppercase min-h-[80px] transition-all duration-500">
-              {heroMessages[currentMessageIndex]}
-            </h1>
-            <p className="text-xl md:text-2xl font-light">
-              Um veículo exclusivo para você e sua família!
-              <br />
-              <span className="font-bold">AQUI!</span>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-                <Link
-                  href={whatsappLink(
-                    "Olá! Gostaria de mais informações sobre o transporte privativo da Naturis Turismo.",
-                  )}
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="max-w-2xl space-y-6 text-white py-10 md:py-20">
+              <div className="inline-block animate-bounce bg-green-600 text-white py-1 px-3 rounded-full text-sm font-medium mb-2">
+                O melhor da Tríplice Fronteira!
+              </div>
+              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl uppercase min-h-[80px] transition-all duration-500">
+                {heroMessages[currentMessageIndex]}
+              </h1>
+              <p className="text-xl md:text-2xl font-light">
+                Um veículo exclusivo para você e sua família!
+                <br />
+                <span className="font-bold">AQUI!</span>
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
+                  <Link
+                    href={whatsappLink(
+                      "Olá! Gostaria de mais informações sobre o transporte privativo da Naturis Turismo.",
+                    )}
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Entrar em Contato
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
                 >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Entrar em Contato
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20"
-              >
-                <Link href="#atrativos">
-                  Conhecer Passeios
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+                  <Link href="#atrativos">
+                    Conhecer Passeios
+                    <ChevronRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Destaque de Receptivo */}
+            <div className="mt-8 md:mt-0 bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 text-white self-center">
+              <h3 className="text-xl font-bold mb-4 text-green-400">RECEPTIVO EM:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <ChevronRight className="h-5 w-5 text-green-400 mr-2" />
+                  <span className="text-lg font-semibold">FOZ DO IGUAÇU</span>
+                </li>
+                <li className="flex items-center">
+                  <ChevronRight className="h-5 w-5 text-green-400 mr-2" />
+                  <span className="text-lg font-semibold">CIUDAD DEL ESTE</span>
+                </li>
+                <li className="flex items-center">
+                  <ChevronRight className="h-5 w-5 text-green-400 mr-2" />
+                  <span className="text-lg font-semibold">PUERTO IGUAZÚ</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -154,31 +175,171 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Atrativos Description */}
-      <section className="bg-white py-8">
+      {/* Atrativos Description - Versão Aprimorada */}
+      <section className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <p className="text-center text-gray-700 max-w-4xl mx-auto">
-            Pensando no bem-estar dos nossos clientes, agrupamos os atrativos turísticos de Foz do Iguaçu em uma única
-            seção.
-            <br />
-            Planeje as férias dos seus sonhos com a Naturis Turismo!
-          </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
+                <div className="bg-blue-950 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-8 h-8"
+                  >
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5 8 12 8 12s8-7 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-blue-950 mb-2">3 Países</h3>
+                <p className="text-gray-700">
+                  Explore Brasil, Argentina e Paraguai em uma única viagem com nosso transporte exclusivo.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
+                <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-8 h-8"
+                  >
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-blue-950 mb-2">Atendimento VIP</h3>
+                <p className="text-gray-700">
+                  Suporte personalizado 24h via WhatsApp para garantir a melhor experiência durante sua estadia.
+                </p>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg text-center hover:shadow-lg transition-all">
+                <div className="bg-blue-950 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-8 h-8"
+                  >
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-blue-950 mb-2">+20 Atrativos</h3>
+                <p className="text-gray-700">
+                  Mais de 20 opções de passeios cuidadosamente selecionados para todos os gostos e idades.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center bg-gradient-to-r from-blue-950 to-blue-900 p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-white mb-4">Planeje as férias dos seus sonhos!</h3>
+              <p className="text-lg text-white/90 mb-6">
+                Na Naturis Turismo, pensamos em cada detalhe para proporcionar uma experiência inesquecível. Nossos
+                roteiros são planejados para maximizar seu tempo e garantir que você conheça o melhor da Tríplice
+                Fronteira com conforto, segurança e exclusividade.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 text-green-400 mr-2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="text-white">Transporte Privativo</span>
+                </div>
+                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 text-green-400 mr-2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="text-white">Guias Especializados</span>
+                </div>
+                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 text-green-400 mr-2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="text-white">Roteiros Personalizados</span>
+                </div>
+                <div className="flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5 text-green-400 mr-2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span className="text-white">Experiências Exclusivas</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Principais Atrativos */}
+      {/* Principais Atrativos - Primeira Linha */}
       <section className="bg-blue-50 py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-bold text-blue-950">Principais Atrativos</h3>
-            <div className="w-20 h-1 bg-green-600 mx-auto mt-2"></div>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Cataratas BR */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
               <div className="relative h-72">
-                <Image src="/cataratas-br.jpg" alt="Cataratas do Iguaçu (BR)" fill className="object-cover" />
+                <Image src="/passeios/foz-do-iguacu.jpg" alt="Cataratas do Iguaçu (BR)" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
@@ -196,18 +357,14 @@ export default function Home() {
                   Uma das 7 maravilhas naturais do mundo, as Cataratas do Iguaçu são um espetáculo da natureza com mais
                   de 275 quedas d'água.
                 </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-500">A partir de:</p>
-                    <p className="text-xl font-bold text-blue-950">R$ 95,00</p>
-                  </div>
+                <div className="flex justify-end">
                   <Button
                     asChild
                     className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
                   >
                     <Link
                       href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o passeio para as Cataratas do Iguaçu (lado brasileiro). Valor: R$ 95,00",
+                        "Olá! Gostaria de informações sobre o passeio para as Cataratas do Iguaçu (lado brasileiro).",
                       )}
                     >
                       Reservar Agora
@@ -218,10 +375,90 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Parque das Aves */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/parquedasaves.jpg" alt="Parque das Aves" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Parque das Aves</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(195 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Uma imersão na fauna da Mata Atlântica com mais de 1.400 aves de 150 espécies diferentes em um
+                  ambiente natural.
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Parque das Aves.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Marco das Três Fronteiras */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/3fronteiras.jpg" alt="Marco das Três Fronteiras" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Marco das Três Fronteiras</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(142 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Ponto turístico onde é possível visualizar o encontro dos rios Paraná e Iguaçu e a fronteira entre
+                  Brasil, Argentina e Paraguai.
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Marco das Três Fronteiras.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Segunda Linha de Atrativos */}
+      <section className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Compras no Paraguai */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
               <div className="relative h-72">
-                <Image src="/compras-paraguai.jpg" alt="Compras no Paraguai" fill className="object-cover" />
+                <Image src="/passeios/comprasparaguai.jpg" alt="Compras no Paraguai" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <Badge className="bg-green-600 hover:bg-green-700 text-white">Paraguai</Badge>
@@ -242,20 +479,12 @@ export default function Home() {
                   Ciudad del Este é o paraíso das compras! Com preços baixos e uma enorme variedade de produtos
                   importados.
                 </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-500">A partir de:</p>
-                    <p className="text-xl font-bold text-blue-950">R$ 45,00</p>
-                  </div>
+                <div className="flex justify-end">
                   <Button
                     asChild
                     className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
                   >
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o passeio de Compras no Paraguai. Valor: R$ 45,00",
-                      )}
-                    >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o passeio de Compras no Paraguai.")}>
                       Reservar Agora
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -267,11 +496,11 @@ export default function Home() {
             {/* Cataratas Argentina */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
               <div className="relative h-72">
-                <Image src="/cataratas-arg.jpg" alt="Cataratas do Iguaçu (ARG)" fill className="object-cover" />
+                <Image src="/passeios/IguazuCataratas2.jpg" alt="Cataratas do Iguaçu (ARG)" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                   <Badge className="bg-green-600 hover:bg-green-700 text-white">Argentina</Badge>
-                  <h3 className="text-2xl font-bold text-white mt-2">Cataratas do Iguaçu</h3>
+                  <h3 className="text-2xl font-bold text-white mt-2">Cataratas do Iguazú</h3>
                 </div>
               </div>
               <div className="p-4">
@@ -285,20 +514,51 @@ export default function Home() {
                   O lado argentino das Cataratas oferece uma experiência única com passarelas que permitem chegar bem
                   próximo das quedas.
                 </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-500">A partir de:</p>
-                    <p className="text-xl font-bold text-blue-950">R$ 140,00</p>
-                  </div>
+                <div className="flex justify-end">
                   <Button
                     asChild
                     className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
                   >
                     <Link
                       href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o passeio para as Cataratas do Iguaçu (lado argentino). Valor: R$ 140,00",
+                        "Olá! Gostaria de informações sobre o passeio para as Cataratas do Iguaçu (lado argentino).",
                       )}
                     >
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Macuco Safari */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/MacucoSafari.jpg" alt="Macuco Safari" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Macuco Safari</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(178 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Aventura emocionante de barco que leva você bem próximo às quedas das Cataratas do Iguaçu. Uma
+                  experiência única e refrescante!
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Macuco Safari.")}>
                       Reservar Agora
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -310,79 +570,157 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mais Atrativos Grid */}
-      <section id="atrativos" className="bg-white py-12">
+      {/* Terceira Linha de Atrativos */}
+      <section className="bg-blue-50 py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-bold text-blue-950">Outros Passeios Imperdíveis</h3>
-            <div className="w-20 h-1 bg-green-600 mx-auto mt-2"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Hidrelétrica Itaipu */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/hidreletricaitaipu.jpg" alt="Hidrelétrica Itaipu" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Hidrelétrica Itaipu</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(165 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Conheça a maior geradora de energia limpa e renovável do planeta! Uma obra de engenharia
+                  impressionante na fronteira entre Brasil e Paraguai.
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre a visita à Hidrelétrica de Itaipu.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Roda Gigante Yup Star Foz */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/RodaGiganteYupStar.jpg" alt="Roda Gigante Yup Star Foz" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Roda Gigante Yup Star</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(152 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Uma vista panorâmica incrível de toda a cidade de Foz do Iguaçu. A maior roda gigante da América
+                  Latina com 88 metros de altura.
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre a Roda Gigante - Yup Star Foz.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Wonder Park Foz */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/WonderParkFoz.jpg" alt="Wonder Park Foz" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Wonder Park Foz</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(138 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Parque de diversões com atrações para toda a família. Montanha-russa, carrossel, brinquedos radicais e
+                  muito mais!
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Wonder Park Foz.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {/* Dream Motor Show */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/dream-motor-show.jpg" alt="Dream Motor Show" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Dream Motor Show</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Exposição de veículos antigos e modernos em um ambiente temático incrível.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">R$ 85,00</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
-                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Dream Motor Show. Valor: R$ 85,00")}>
-                      Reservar
-                    </Link>
-                  </Button>
+      {/* Quarta Linha de Atrativos */}
+      <section className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Dreams Park Show */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/DreamsParkShow.jpg" alt="Dreams Park Show" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Dreams Park Show</h3>
                 </div>
               </div>
-            </div>
-
-            {/* Roda Gigante */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/roda-gigante.jpg" alt="Roda Gigante - Yup Star Foz" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Roda Gigante - Yup Star Foz</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Uma vista panorâmica incrível de toda a cidade de Foz do Iguaçu.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">R$ 70,00</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre a Roda Gigante - Yup Star Foz. Valor: R$ 70,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(172 avaliações)</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Museu de Cera */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/museu-cera.jpg" alt="Museu de Cera" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Museu de Cera</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Réplicas em tamanho real de personalidades famosas em cenários especiais.
+                <p className="text-gray-700 mb-4">
+                  Show automotivo com carros de alto desempenho, motos e efeitos especiais em uma apresentação cheia de
+                  adrenalina e emoção!
                 </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">R$ 65,00</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
-                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Museu de Cera. Valor: R$ 65,00")}>
-                      Reservar
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Dreams Park Show.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
@@ -390,47 +728,34 @@ export default function Home() {
             </div>
 
             {/* Voo Panorâmico */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/voo-panoramico.jpg" alt="Voo Panorâmico" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Voo Panorâmico</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Uma experiência única e inesquecível para ver as Cataratas do alto.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">R$ 390,00</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
-                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Voo Panorâmico. Valor: R$ 390,00")}>
-                      Reservar
-                    </Link>
-                  </Button>
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/VooPanoramico.jpg" alt="Voo Panorâmico" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Voo Panorâmico</h3>
                 </div>
               </div>
-            </div>
-
-            {/* Dreamland - Vale do Dinossauro */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/vale-dinossauros.jpg" alt="Dreamland - Vale do Dinossauro" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Dreamland - Vale do Dinossauro</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Parque temático com réplicas de dinossauros em tamanho real.
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(145 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Uma experiência única e inesquecível para ver as Cataratas do alto. Vistas deslumbrantes que ficarão
+                  para sempre na memória.
                 </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">R$ 90,00</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o Dreamland - Vale do Dinossauro. Valor: R$ 90,00",
-                      )}
-                    >
-                      Reservar
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Voo Panorâmico.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
@@ -438,207 +763,37 @@ export default function Home() {
             </div>
 
             {/* Templo Budista */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/templo-budista.jpg" alt="Templo Budista" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/TemploBudista.png" alt="Templo Budista" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Templo Budista</h3>
+                </div>
               </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Templo Budista</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Templo com arquitetura oriental única e jardins de meditação.
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(132 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Templo com arquitetura oriental única e jardins de meditação. Um lugar de paz e tranquilidade em meio
+                  à agitação turística.
                 </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">Gratuito</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
                     <Link href={whatsappLink("Olá! Gostaria de informações sobre o passeio ao Templo Budista.")}>
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Marco das Três Fronteiras */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/marco-tres-fronteiras.jpg" alt="Marco das Três Fronteiras" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Marco das Três Fronteiras</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Ponto turístico onde é possível visualizar o encontro dos rios Paraná e Iguaçu.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">R$ 30,00</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o Marco das Três Fronteiras. Valor: R$ 30,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Parque das Aves */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
-              <div className="relative h-48">
-                <Image src="/parque-aves.jpg" alt="Parque das Aves" fill className="object-cover" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div className="p-3">
-                <h3 className="text-lg font-bold text-blue-950">Parque das Aves</h3>
-                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
-                  Uma imersão na fauna da Mata Atlântica com mais de 1.400 aves de 150 espécies.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-green-600 font-bold">R$ 60,00</p>
-                  <Button asChild className="text-xs py-1 px-2 h-auto bg-blue-950 hover:bg-green-600">
-                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Parque das Aves. Valor: R$ 60,00")}>
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8">
-            <Button asChild className="mx-auto bg-green-600 hover:bg-green-700 flex">
-              <Link href={whatsappLink("Olá! Gostaria de informações sobre todos os atrativos disponíveis.")}>
-                Ver Todos os Atrativos
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Itaipu Section */}
-      <section className="bg-blue-100 py-12">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-bold text-blue-950">Passeios em Itaipu</h3>
-            <div className="w-20 h-1 bg-green-600 mx-auto mt-2"></div>
-            <p className="mt-4 text-gray-700">Conheça a maior geradora de energia limpa e renovável do planeta!</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Itaipu Visita Panorâmica */}
-            <div className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative w-full md:w-1/3 h-48 md:h-auto">
-                <Image src="/itaipu-panoramica.jpg" alt="Itaipu - Visita Panorâmica" fill className="object-cover" />
-              </div>
-              <div className="p-4 w-full md:w-2/3">
-                <h3 className="text-xl font-bold text-blue-950 mb-2">Visita Panorâmica</h3>
-                <p className="text-gray-700 mb-4">
-                  Passeio de 1h30 com vista panorâmica da barragem, área externa e mirante central. Ideal para conhecer
-                  a grandiosidade da usina.
-                </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-500">A partir de:</p>
-                    <p className="text-xl font-bold text-green-600">R$ 40,00</p>
-                  </div>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre a Visita Panorâmica em Itaipu. Valor: R$ 40,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Itaipu Visita Especial */}
-            <div className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative w-full md:w-1/3 h-48 md:h-auto">
-                <Image src="/itaipu-especial.jpg" alt="Itaipu - Visita Especial" fill className="object-cover" />
-              </div>
-              <div className="p-4 w-full md:w-2/3">
-                <h3 className="text-xl font-bold text-blue-950 mb-2">Visita Especial</h3>
-                <p className="text-gray-700 mb-4">
-                  Experiência completa de 2h30 com acesso às instalações internas da usina, sala de máquinas e áreas
-                  restritas. Imperdível!
-                </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-500">A partir de:</p>
-                    <p className="text-xl font-bold text-green-600">R$ 120,00</p>
-                  </div>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre a Visita Especial em Itaipu. Valor: R$ 120,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Itaipu Iluminação */}
-            <div className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative w-full md:w-1/3 h-48 md:h-auto">
-                <Image src="/itaipu-iluminacao.jpg" alt="Itaipu - Iluminação" fill className="object-cover" />
-              </div>
-              <div className="p-4 w-full md:w-2/3">
-                <h3 className="text-xl font-bold text-blue-950 mb-2">Iluminação Monumental</h3>
-                <p className="text-gray-700 mb-4">
-                  Um espetáculo noturno com jogos de luzes que destacam a beleza e imponência da barragem. Um show de
-                  cores e luzes imperdível!
-                </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-500">A partir de:</p>
-                    <p className="text-xl font-bold text-green-600">R$ 50,00</p>
-                  </div>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre a Iluminação Monumental de Itaipu. Valor: R$ 50,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Itaipu Refúgio Biológico */}
-            <div className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative w-full md:w-1/3 h-48 md:h-auto">
-                <Image src="/itaipu-refugio.jpg" alt="Itaipu - Refúgio Biológico" fill className="object-cover" />
-              </div>
-              <div className="p-4 w-full md:w-2/3">
-                <h3 className="text-xl font-bold text-blue-950 mb-2">Refúgio Biológico</h3>
-                <p className="text-gray-700 mb-4">
-                  Área de preservação com 2.200 hectares onde você pode observar animais nativos resgatados durante a
-                  formação do lago de Itaipu.
-                </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm text-gray-500">A partir de:</p>
-                    <p className="text-xl font-bold text-green-600">R$ 45,00</p>
-                  </div>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o Refúgio Biológico de Itaipu. Valor: R$ 45,00",
-                      )}
-                    >
-                      Reservar
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
@@ -648,126 +803,115 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dreamland Section */}
-      <section className="bg-white py-12">
+      {/* Quinta Linha de Atrativos */}
+      <section className="bg-blue-50 py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-bold text-blue-950">Complexo Dreamland</h3>
-            <div className="w-20 h-1 bg-green-600 mx-auto mt-2"></div>
-            <p className="mt-4 text-gray-700">O maior complexo de entretenimento da tríplice fronteira!</p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Dreamland - Vale dos Dinossauros */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative h-60">
-                <Image
-                  src="/vale-dinossauros.jpg"
-                  alt="Dreamland - Vale dos Dinossauros"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                  <h3 className="text-xl font-bold text-white">Vale dos Dinossauros</h3>
+            {/* Dream Ice Bar */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/dreamice.jpg" alt="Dream Ice Bar" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Dream Ice Bar</h3>
                 </div>
               </div>
               <div className="p-4">
-                <p className="text-gray-700 mb-4">
-                  Réplicas de dinossauros em tamanho real, incluindo o maior T-Rex animatrônico do Brasil. Diversão
-                  garantida!
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-lg font-bold text-green-600">R$ 90,00</p>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o Dreamland - Vale dos Dinossauros. Valor: R$ 90,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(128 avaliações)</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Dreamland - Museu de Cera */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative h-60">
-                <Image src="/museu-cera.jpg" alt="Dreamland - Museu de Cera" fill className="object-cover" />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                  <h3 className="text-xl font-bold text-white">Museu de Cera</h3>
-                </div>
-              </div>
-              <div className="p-4">
-                <p className="text-gray-700 mb-4">
-                  Mais de 90 figuras em cera de personalidades mundiais, retratando celebridades, esportistas e
-                  personagens históricos.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-lg font-bold text-green-600">R$ 65,00</p>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o Dreamland - Museu de Cera. Valor: R$ 65,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Dreamland - Maravilhas do Mundo */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative h-60">
-                <Image
-                  src="/maravilhas-mundo.jpg"
-                  alt="Dreamland - Maravilhas do Mundo"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                  <h3 className="text-xl font-bold text-white">Maravilhas do Mundo</h3>
-                </div>
-              </div>
-              <div className="p-4">
-                <p className="text-gray-700 mb-4">
-                  Réplicas perfeitas das principais maravilhas do mundo, como Taj Mahal, Cristo Redentor e Torre Eiffel.
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-lg font-bold text-green-600">R$ 70,00</p>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link
-                      href={whatsappLink(
-                        "Olá! Gostaria de informações sobre o Dreamland - Maravilhas do Mundo. Valor: R$ 70,00",
-                      )}
-                    >
-                      Reservar
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Dreamice Bar */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="relative h-60">
-                <Image src="/dreamice.jpg" alt="Dreamice Bar" fill className="object-cover" />
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                  <h3 className="text-xl font-bold text-white">Dreamice Bar</h3>
-                </div>
-              </div>
-              <div className="p-4">
                 <p className="text-gray-700 mb-4">
                   Bar temático com temperatura de -10°C onde tudo é feito de gelo: copos, mesas, cadeiras e esculturas.
+                  Uma experiência refrescante!
                 </p>
-                <div className="flex justify-between items-center">
-                  <p className="text-lg font-bold text-green-600">R$ 75,00</p>
-                  <Button asChild className="bg-blue-950 hover:bg-green-600">
-                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Dreamice Bar. Valor: R$ 75,00")}>
-                      Reservar
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Dream Ice Bar.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Mesquita Omar */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/mesquitaomar.jpeg" alt="Mesquita Omar" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Mesquita Omar</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(115 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Uma das maiores mesquitas do Brasil, com arquitetura árabe impressionante. Um importante centro
+                  cultural e religioso da região.
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre a visita à Mesquita Omar.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Kattamaram Jantar por do sol */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/Kattamaramjantarpordosol.jpg" alt="Kattamaram Jantar por do sol" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Kattamaram Jantar por do sol</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(135 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Passeio romântico de barco com jantar enquanto você aprecia o pôr do sol no Rio Paraná. Uma
+                  experiência gastronômica e visual inesquecível.
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Kattamaram Jantar por do sol.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
@@ -777,67 +921,115 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Shows Section */}
-      <section className="bg-gradient-to-br from-blue-950 to-blue-900 py-12 text-white">
+      {/* Sexta Linha de Atrativos */}
+      <section className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-bold">Shows e Entretenimento</h3>
-            <div className="w-20 h-1 bg-green-600 mx-auto mt-2"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Dream Motor Show */}
-            <div className="flex flex-col bg-blue-950/50 backdrop-blur-sm rounded-lg overflow-hidden border border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* City Tour Foz do Iguaçu */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
               <div className="relative h-72">
-                <Image src="/dream-motor-show.jpg" alt="Dream Motor Show" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <Image src="/passeios/CityTourFozdoIguaçu.jpg" alt="City Tour Foz do Iguaçu" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
-                  <h3 className="text-2xl font-bold text-white">Dream Motor Show</h3>
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Brasil</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">City Tour Foz do Iguaçu</h3>
                 </div>
               </div>
-              <div className="p-6">
-                <p className="mb-4">
-                  Show automotivo com carros de alto desempenho, motos e efeitos especiais em uma apresentação cheia de
-                  adrenalina e emoção!
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(125 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Conheça os principais pontos turísticos da cidade de Foz do Iguaçu em um passeio completo com guia
+                  especializado.
                 </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm opacity-80">A partir de:</p>
-                    <p className="text-2xl font-bold text-green-400">R$ 85,00</p>
-                  </div>
-                  <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Dream Motor Show. Valor: R$ 85,00")}>
-                      Reservar Ingressos
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o City Tour em Foz do Iguaçu.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
               </div>
             </div>
 
-            {/* Rafain Jantar Show */}
-            <div className="flex flex-col bg-blue-950/50 backdrop-blur-sm rounded-lg overflow-hidden border border-white/10">
+            {/* City Tour no Paraguai */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
               <div className="relative h-72">
-                <Image src="/rafain-show.jpg" alt="Rafain Jantar Show" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <Image src="/passeios/citytour_PY.jpg" alt="City Tour no Paraguai" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
-                  <h3 className="text-2xl font-bold text-white">Rafain Jantar Show</h3>
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Paraguai</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">City Tour no Paraguai</h3>
                 </div>
               </div>
-              <div className="p-6">
-                <p className="mb-4">
-                  O maior show folclórico das Américas! Jantar com buffet internacional e apresentações de danças
-                  típicas de diversos países da América Latina.
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+                    />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(118 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Explore Ciudad del Este além das compras. Conheça a cultura, gastronomia e pontos turísticos do
+                  Paraguai com guia especializado.
                 </p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-sm opacity-80">A partir de:</p>
-                    <p className="text-2xl font-bold text-green-400">R$ 150,00</p>
-                  </div>
-                  <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-                    <Link
-                      href={whatsappLink("Olá! Gostaria de informações sobre o Rafain Jantar Show. Valor: R$ 150,00")}
-                    >
-                      Reservar Ingressos
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o City Tour no Paraguai.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Bay Night Argentina */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 group">
+              <div className="relative h-72">
+                <Image src="/passeios/BayNightArgentina.jpg" alt="Bay Night Argentina" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-4">
+                  <Badge className="bg-green-600 hover:bg-green-700 text-white">Argentina</Badge>
+                  <h3 className="text-2xl font-bold text-white mt-2">Bay Night Argentina</h3>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                  <span className="text-sm text-gray-500 ml-1">(130 avaliações)</span>
+                </div>
+                <p className="text-gray-700 mb-4">
+                  Conheça a vida noturna de Puerto Iguazú. Bares, restaurantes, cassinos e a cultura argentina em um
+                  passeio inesquecível.
+                </p>
+                <div className="flex justify-end">
+                  <Button
+                    asChild
+                    className="bg-blue-950 hover:bg-blue-900 group-hover:bg-green-600 group-hover:text-white transition-colors"
+                  >
+                    <Link href={whatsappLink("Olá! Gostaria de informações sobre o Bay Night Argentina.")}>
+                      Reservar Agora
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
@@ -847,64 +1039,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Versão Responsiva */}
       <section className="py-16 bg-green-600">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 items-center gap-8">
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Pronto para viver uma experiência inesquecível em Foz do Iguaçu?
-              </h2>
-              <p className="text-lg text-white/90">
-                Entre em contato conosco agora mesmo e planeje sua viagem com quem conhece os melhores passeios da
-                região. Garantimos o melhor preço e atendimento personalizado!
-              </p>
-              <div className="flex items-center bg-white/20 backdrop-blur-sm p-3 rounded-lg text-white">
-                <Phone className="h-5 w-5 mr-3" />
-                <span className="text-lg font-bold">(45) 9912-81353</span>
-              </div>
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Pronto para viver uma experiência inesquecível na Tríplice Fronteira?
+            </h2>
+            <p className="text-lg text-white/90 mb-8">
+              Entre em contato conosco agora mesmo e planeje sua viagem com quem conhece os melhores passeios da região.
+              Garantimos o melhor preço e atendimento personalizado!
+            </p>
+            <div className="flex items-center justify-center bg-white/20 backdrop-blur-sm p-3 rounded-lg text-white mb-8 max-w-md mx-auto">
+              <Phone className="h-5 w-5 mr-3" />
+              <span className="text-lg font-bold">(45) 9912-81353</span>
             </div>
 
-            {/* Substituir formulário por botão de WhatsApp */}
-<div className="bg-white px-4 py-8 sm:p-8 rounded-lg shadow-lg text-center w-full max-w-md mx-auto">
-  <h3 className="text-2xl font-bold mb-4 text-blue-950">Solicitar Orçamento</h3>
-  <p className="text-gray-600 mb-6">
-    Clique no botão abaixo para falar diretamente com nossa equipe pelo WhatsApp e receber um orçamento
-    personalizado para sua viagem.
-  </p>
-  <Button
-    asChild
-    size="lg"
-    className="w-full py-5 sm:py-6 text-base sm:text-lg bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2"
-  >
-    <Link
-      href={whatsappLink(
-        "Olá! Gostaria de solicitar um orçamento personalizado para minha viagem a Foz do Iguaçu.",
-      )}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="white"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-6 h-6 mr-2"
-      >
-        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
-        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
-        <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
-        <path d="M9 14a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5Z"></path>
-      </svg>
-      Solicitar Orçamento via WhatsApp
-    </Link>
-  </Button>
-  <p className="text-sm text-gray-500 mt-4">Resposta rápida e atendimento personalizado!</p>
-</div>
-
+            <Button
+              asChild
+              size="lg"
+              className="w-full max-w-md mx-auto py-6 text-lg bg-white hover:bg-white/90 text-blue-950 flex items-center justify-center gap-2"
+            >
+              <Link
+                href={whatsappLink(
+                  "Olá! Gostaria de solicitar um orçamento personalizado para minha viagem a Foz do Iguaçu.",
+                )}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#0a2240"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-6 h-6 mr-2"
+                >
+                  <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
+                  <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
+                  <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
+                  <path d="M9 14a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5Z"></path>
+                </svg>
+                Solicitar Orçamento via WhatsApp
+              </Link>
+            </Button>
+            <p className="text-sm text-white/80 mt-4">Resposta rápida e atendimento personalizado!</p>
           </div>
         </div>
       </section>
